@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cho trước 1 mảng n phần tử
+        Viết hàm đếm in ra số lượng các số chẵn trong mảng
+        </title>
+</head>
+<body>
+    <script>
+        let arr = [12,21,35,46,50,63,78,85]
+        let count = 0 
+        function getNumber(){
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] % 2 == 0){
+                    count++
+                }
+            }
+            return count
+        }
+        alert('Các số chẵn là: ' + getNumber())
+    </script>
+</body>
+</html>

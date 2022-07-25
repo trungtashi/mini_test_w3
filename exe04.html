@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình tính tổng các số nguyên tố nhỏ hơn 500
+    </title>
+</head>
+<body>
+    <script>
+        function testNumberPrime(number) {
+            let startNumber = 2;
+            let arr = new Array()
+            while (startNumber < number) {
+                let check = true;
+                for (let i = 2; i <= Math.sqrt(startNumber); i++) {
+                    if (startNumber % i === 0) {
+                        check = false
+                        break
+                    }
+                }
+                if (check) {
+                    arr.push(startNumber)
+                }
+                startNumber ++
+            }
+            return arr
+        }
+        function totalNumberPrime(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length ; i++) {
+                sum += arr[i]
+            }
+            return sum
+        }
+        let number = 500
+        let arr = testNumberPrime(number);
+        let total = totalNumberPrime(arr)
+        alert("Tổng các số nguyên tố nhỏ hơn "+ number + " là: " + total)
+    </script>
+</body>
+</html>
